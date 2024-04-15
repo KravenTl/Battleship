@@ -97,7 +97,7 @@ static void game(int[,] mapa, int[] barcos, string[] nombarcos)
             if (mapa[i, j] == 1 || mapa[i, j] == 2 || mapa[i, j] == 3)
             {
                 // Disparo acertado
-                mapa[i, j] = 7;
+                mapa[i, j] = 68;
                 Console.Beep();
                 Console.Clear();
                 Console.WriteLine();
@@ -113,7 +113,7 @@ static void game(int[,] mapa, int[] barcos, string[] nombarcos)
             else if (mapa[i, j] == 0)
             {
                 // Disparo fallado
-                mapa[i, j] = 5;
+                mapa[i, j] = 9;
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("¡FALLASTE! -7 balas\n");
@@ -122,7 +122,7 @@ static void game(int[,] mapa, int[] barcos, string[] nombarcos)
                 cont++;
                 puntos -= 25;
             }
-            else if (mapa[i, j] == 7 || mapa[i, j] == 5)
+            else if (mapa[i, j] == 68|| mapa[i, j] == 9)
             {
                 // Disparo repetido en la misma casilla
                 Console.WriteLine();
@@ -207,13 +207,13 @@ static void mostrarMapa(int[,] renglones)
                 Console.Write(string.Format("{0,3}", "-"));
                 Console.ResetColor();
             }
-            else if (renglones[i - 1, j - 1] == 7)
+            else if (renglones[i - 1, j - 1] == 68)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write(string.Format("{0,3}", "X"));
                 Console.ResetColor();
             }
-            else if (renglones[i - 1, j - 1] == 5)
+            else if (renglones[i - 1, j - 1] == 9)
             {
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write(string.Format("{0,3}", "O"));
