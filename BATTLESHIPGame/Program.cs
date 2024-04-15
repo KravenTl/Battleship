@@ -58,7 +58,7 @@ Console.WriteLine("Game Over\nGracias por jugar :)");
 // Método principal del juego
 static void game(int[,] mapa, int[] barcos, string[] nombarcos)
 {
-    ponerbarcos(mapa, barcos, nombarcos); // Colocar los barcos en el tablero
+    ponerbarcos(mapa, barcos); // Colocar los barcos en el tablero
     int cont = 0;
     int dadas = 0;
     int unidadesene = 29;
