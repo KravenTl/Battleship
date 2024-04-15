@@ -104,7 +104,7 @@ static void game(int[,] mapa, int[] barcos, string[] nombarcos)
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.WriteLine("¡DISTE EN EL BLANCO! + 15 balas\n");
                 Console.ResetColor();
-                municiones += 30;
+                municiones += 15;
                 dadas++;
                 cont++;
                 unidadesene--;
@@ -129,7 +129,7 @@ static void game(int[,] mapa, int[] barcos, string[] nombarcos)
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("¡QUÉ HACES? ¡NO DISPARES DOS VECES AL MISMO LUGAR! -7 balas\n");
                 Console.ResetColor();
-                municiones -= 15;
+                municiones -= 7;
                 cont++;
                 puntos -= 25;
             }
