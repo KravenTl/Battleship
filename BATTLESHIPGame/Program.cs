@@ -225,7 +225,7 @@ static void mostrarMapa(int[,] renglones)
 }
 
 // Método para colocar los barcos en el tablero
-static void ponerbarcos(int[,] rojos, int[] tambarcos, string[] nombarcos)
+static void ponerbarcos(int[,] rojos, int[] tambarcos)
 {
     // Para generar números aleatorios
     Random ram9 = new Random();
@@ -243,7 +243,6 @@ static void ponerbarcos(int[,] rojos, int[] tambarcos, string[] nombarcos)
     for (int i = 0; i < tambarcos.Length; i++)
     {
         int numbarcos = tambarcos[i];
-        string nombrebarco = nombarcos[i];
 
         // Generar la cantidad indicada de barcos
         for (int j = 0; j < numbarcos; j++)
